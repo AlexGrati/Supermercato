@@ -32,6 +32,4 @@ dependencies {
     implementation 'com.android.support:design:26.1.0'
     compile 'com.google.code.gson:gson:2.8.2'
 }
-
-
 apply plugin: 'com.google.gms.google-services'

@@ -45,7 +45,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
     @Override
     public void onBindViewHolder(CardViewHolder holder, int position) {
         Prodotto p = listaProdotti.get(position);
-        String str = "Marca: "+p.getMarca() +"\nPrezzo" + p.getPrezzo();
+        String str = "Marca: "+p.getMarca() +"\nPrezzo: " + p.getPrezzo();
         holder.cardTextView.setText(str);
         Bitmap bitmap;
         if(p instanceof Carne) {

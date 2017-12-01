@@ -22,22 +22,25 @@
     <EditText
         android:id="@+id/editTextInsertUsername"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_above="@+id/bSalvaUtente"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="73dp"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/insert_text_design"
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/bSalvaUtente"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="123dp"
+        android:background="@drawable/item_design"
         android:onClick="onSalvaUtenteButtonPressed"
         android:text="Salva Utente" />
 </RelativeLayout>

@@ -61,6 +61,7 @@ public class InserisciActivity extends AppCompatActivity implements ResponseCont
             if(selectedItem.equals("Pesce")){
                 p = new Pesce(marca, Double.parseDouble(prezzo));
             }
+
             magazzino = (Magazzino) FileOperations.readObject(getApplicationContext(),"MAGAZZINO");
             List<Prodotto> listaProdotto = null;
             if(magazzino != null)
@@ -70,6 +71,7 @@ public class InserisciActivity extends AppCompatActivity implements ResponseCont
 
             if(listaProdotto == null)
                 listaProdotto = new ArrayList<>();
+
             setResult(Activity.RESULT_OK);
             listaProdotto.add(0,p);
             magazzino.setListProdotti(listaProdotto);
@@ -92,7 +94,6 @@ public class InserisciActivity extends AppCompatActivity implements ResponseCont
                     myRef.child(key).child("Marca").setValue(p.getMarca());
                     myRef.child(key).child("Prezzo").setValue(p.getPrezzo());
                     controller.respond();
-
                     Toast.makeText(getApplicationContext(),
                             "Prodotto Inserito",
                             Toast.LENGTH_SHORT).show();

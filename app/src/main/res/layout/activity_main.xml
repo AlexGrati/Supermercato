@@ -17,7 +17,7 @@
         android:textAlignment="center"
         android:textSize="65sp"
         android:textStyle="bold"
-        tools:textColor="@android:color/background_dark" />
+        android:textColor="@android:color/background_dark"/>
 
     <TextView
         android:id="@+id/textViewWelcome"
@@ -46,6 +46,7 @@
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="11dp"
+        android:background="@drawable/item_design"
         android:onClick="onMostraProdottiButtonPressed"
         android:text="Mostra Prodotti" />
 
@@ -55,6 +56,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/item_design"
         android:onClick="onRegistratiButtonPressed"
         android:text="Registrati"
         android:textSize="18sp" />

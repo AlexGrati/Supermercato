@@ -10,40 +10,47 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
         android:text="Inserisci"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textColor="@android:color/background_dark"
+        android:textSize="60sp" />
 
     <Spinner
         android:id="@+id/spinnerId"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/textView2"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
         android:entries="@array/spinner_items"
-        android:layout_marginTop="39dp" />
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/editTextMarca"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/editTextPrezzo"
         android:layout_below="@+id/spinnerId"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/insert_text_design"
         android:ems="10"
         android:hint="marca"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/editTextPrezzo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/editTextMarca"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/insert_text_design"
+        android:textSize="30sp"
         android:ems="10"
         android:hint="prezzo"
         android:inputType="numberDecimal"
@@ -51,11 +58,12 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/editTextPrezzo"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="83dp"
+        android:layout_marginTop="73dp"
+        android:background="@drawable/item_design"
         android:onClick="onInserisciItemButtonPressed"
         android:text="Inserisci" />
 </RelativeLayout>
