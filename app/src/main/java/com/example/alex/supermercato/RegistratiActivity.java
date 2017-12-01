@@ -68,14 +68,8 @@ public class RegistratiActivity extends AppCompatActivity implements ResponseCon
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode == 200) {
                     String str = new String(responseBody);
-                    int i = JSONParser.lastUserKey(str);
-                    Log.d("DEBUG",""+i);
-                    String key = "";
-                    if(i< 10){
-                        key = "0"+i;
-                    }else {
-                        key = ""+i;
-                    }
+                    String key  = JSONParser.lastUserKey(str);
+                    Log.d("DEBUG",""+key);
                     controller.respond();
                     myRef.child(key).setValue(username);
                 }
@@ -83,10 +77,12 @@ public class RegistratiActivity extends AppCompatActivity implements ResponseCon
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-                controller.respond();
-                Toast.makeText(getApplicationContext(),
-                        "Riprova",
-                        Toast.LENGTH_SHORT).show();
+                if (statusCode >= 400 && statusCode < 500) {
+                    controller.respond();
+                    Toast.makeText(getApplicationContext(),
+                            "Riprova",
+                            Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

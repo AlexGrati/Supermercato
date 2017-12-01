@@ -7,10 +7,31 @@
     android:layout_height="match_parent"
     tools:context="com.example.alex.supermercato.MostraProdottiActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerId"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true" />
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bInserisci"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="18dp"
+        android:onClick="onInserisciButtonPressed"
+        android:clickable="true"
+        app:backgroundTint="@android:color/holo_red_dark"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
 </RelativeLayout>

@@ -53,11 +53,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             holder.cardImageView.setImageBitmap(bitmap);
         }
         if(p instanceof Latte) {
-            bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.carne);
+            bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.latte);
             holder.cardImageView.setImageBitmap(bitmap);
         }
         if(p instanceof Pesce) {
-            bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.carne);
+            bitmap = BitmapFactory.decodeResource(context.getResources(), R.drawable.pesce);
             holder.cardImageView.setImageBitmap(bitmap);
         }
     }
