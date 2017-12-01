@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".RegistratiActivity" />
+        <activity android:name=".MostraProdottiActivity" />
+        <activity android:name=".InserisciActivity"></activity>
     </application>
 
 </manifest>
