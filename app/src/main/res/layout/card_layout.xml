@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_margin = "4dp"
-        android:backgroundTint="@color/cardview_shadow_end_color"
+        app:cardBackgroundColor="#ffffff"
         card_view:cardCornerRadius="4dp">
 
         <RelativeLayout

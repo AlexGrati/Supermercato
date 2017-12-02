@@ -17,25 +17,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewUser;
     private SharedPreferences preferences;
     private Intent intent;
-    private Bitmap bitmap;
-    private Bitmap bitmap2;
-    private ImageView imageView1;
-    private ImageView imageView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.cart);
-        bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.user);
         textViewUser = findViewById(R.id.textViewUser);
         textViewUser.setText(preferences.getString("USER","Ospite"));
-        imageView1 = findViewById(R.id.imageView);
-        imageView2 = findViewById(R.id.imageView2);
-        imageView1.setImageBitmap(bitmap);
-        imageView2.setImageBitmap(bitmap2);
-
     }
 
     public void onRegistratiButtonPressed(View v){
